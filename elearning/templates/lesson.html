@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title%} 
+    <title>الدروس  </title>
+    {% endblock title%}
+{% block contact %}
+  <!-- Page Header -->
+  <header class="header">
+    <div class="overlay"></div>
+    <div class="header-content">
+       
+     {% for lesson in lesson_list %}   
+     
+     
+     <h1 class="header-title" > <a href="{% url 'lesson_view' pk=lesson.pk %}">{{lesson.title}}</a></h1>
+     {% endfor %}
+    </div>
+  </header><!-- End of Page Header -->
+{% endblock contact %}

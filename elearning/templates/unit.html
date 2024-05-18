@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title%} 
+    <title>الابواب  </title>
+    {% endblock title%}
+{% block contact %}
+  <!-- Page Header -->
+  <header class="header">
+    <div class="overlay"></div>
+    <div class="header-content">
+       
+     {% for unit in unit_list %}    
+     
+     <h1 class="header-title" > <a href="{% url 'lessons' pk=unit.pk %}">{{unit.name}}</a></h1>
+     {% endfor %}
+    </div>
+  </header><!-- End of Page Header -->
+{% endblock contact %}

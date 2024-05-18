@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title%} 
+    <title>Home</title>
+    {% endblock title%}
+{% block contact %}
+  <!-- Page Header -->
+  <header class="header">
+    <div class="overlay"></div>
+    <div class="header-content">
+      <h1 class="header-title">{% trans "What Happens Tomorrow?" %}</h1>
+      <p class="header-subtitle">{% trans "Exam? Learn more, get more!"%}</p>
+      <p class="header-subtitle">
+        {% trans "To subscribe, connect with"%}
+        <a href="https://www.linkedin.com/in/eslam-qadri-a414861a3/" target="_blank">{% trans "Doctor Name Father-Name"%}</a>
+      </p>
+    </div>
+  </header><!-- End of Page Header -->
+{% endblock contact %}

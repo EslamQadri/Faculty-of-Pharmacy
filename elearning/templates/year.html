@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title%} 
+    <title>السنوات الدراسية </title>
+    {% endblock title%}
+{% block contact %}
+  <!-- Page Header -->
+  <header class="header">
+    <div class="overlay"></div>
+    <div class="header-content">
+       
+     {% for year in years_list %}
+     
+     
+     <h1 class="header-title" > <a href="{% url 'subjects' pk=year.pk %}">{{year.name}}</a></h1>
+     {% endfor %}
+    </div>
+  </header><!-- End of Page Header -->
+{% endblock contact %}

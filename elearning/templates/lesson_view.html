@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title%} 
+    <title>الدرس  </title>
+    {% endblock title%}
+{% block contact %}
+  <!-- Page Header -->
+  <header class="header">
+    <div class="overlay"></div>
+    <div class="header-content">
+       
+        <h1 class="header-title">{{ lesson.number }}</h1>
+        <h1 class="header-title">{{ lesson.title }}</h1>
+        <p>{{ lesson.description }}</p>
+        
+        <!-- Assuming lesson.video is a file path relative to the media directory -->
+        <video controls width="640" height="360">
+            <source src="{{ lesson.video.url }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+
+
+     
+    </div>
+  </header><!-- End of Page Header -->
+{% endblock contact %}

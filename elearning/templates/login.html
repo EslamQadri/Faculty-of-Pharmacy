@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Glassmorphism Login</title>
+  <link rel="stylesheet" href="{% static 'css/stylecss.css'%}">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body>
+    <section class="container">
+        <div class="login-container">
+            <div class="circle circle-one"></div>
+            <div class="form-container">
+                <img src="{% static 'images/illustration.png'%}" alt="illustration" class="illustration" />
+                <h1 class="opacity">LOGIN</h1>
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="text" placeholder="USERNAME" name ="username" />
+                    <input type="password" placeholder="PASSWORD" name ="password"/>
+                    <button class="opacity">SUBMIT</button>
+                </form>
+                
+            </div>
+            <div class="circle circle-two"></div>
+        </div>
+        <div class="theme-btn-container"></div>
+    </section>
+</body>
+<!-- partial -->
+  <script  src="{% static 'scriptjs.js'%}"></script>
+
+</body>
+</html>
