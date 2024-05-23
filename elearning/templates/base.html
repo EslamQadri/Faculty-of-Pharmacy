@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with Dorang landing page.">
     <meta name="author" content="Devcrud">
+
     {% block title%} 
     <title>Title</title>
     {% endblock title%}
@@ -15,6 +16,7 @@
 
     <!-- Bootstrap + Dorang main styles -->
 	<link rel="stylesheet" href="{% static 'assets/css/dorang.css'%}">
+    <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
 
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home" class="dark-theme">
@@ -68,6 +70,6 @@
 
     <!-- Dorang js -->
     <script src="{% static 'assets/js/dorang.js'%}"></script>
-
+    <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
 </body>
 </html>

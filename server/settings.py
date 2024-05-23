@@ -25,9 +25,9 @@ SECRET_KEY = "1wh*#8pu7xzcb+%rn-+rak1xgdoa(ac%inl$%aoi2md2gz^y=9"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 LOGIN_URL = "login"
-LOGOUT_URL = "http://127.0.0.1:8000/out"
+LOGOUT_URL = "logout"
 # Application definition
 
 INSTALLED_APPS = [
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "elearning",
+    
 ]
 
 MIDDLEWARE = [
@@ -52,6 +53,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
+TEMPLATE_CONTEXT_PROCESSORS = ("django.template.context_processors.request",)
 ROOT_URLCONF = "server.urls"
 
 TEMPLATES = [
@@ -115,14 +117,13 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-from django.utils.translation import gettext_lazy as _ 
+from django.utils.translation import gettext_lazy as _
+
 LANGUAGES = (
- ('en', _('English')),
- ('ar', _('Arabic')),
+    ("en", _("English")),
+    ("ar", _("Arabic")),
 )
-LOCALE_PATHS = (
- os.path.join(BASE_DIR, 'locale/'),
-)
+LOCALE_PATHS = (os.path.join(BASE_DIR, "locale/"),)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/

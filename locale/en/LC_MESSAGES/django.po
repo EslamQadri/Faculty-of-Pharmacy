@@ -32,7 +32,7 @@ msgstr "الباب"
 
 #: .\elearning\models.py:43
 msgid "video name"
-msgstr "عنوتن الفيديو"
+msgstr "عنوان الفيديو"
 
 #: .\elearning\templates\index.html:12
 msgid "What Happens Tomorrow?"
