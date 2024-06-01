@@ -53,3 +53,12 @@ class Lesson(models.Model):
 
     def __str__(self) -> str:
         return f"{self.title}"
+
+
+"""
+to do
+test in phone 
+make supsctption system 
+and update en ar 
+
+"""
