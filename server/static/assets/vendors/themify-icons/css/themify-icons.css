@@ -641,7 +641,12 @@
 .ti-wallet:before {
 	content: "\e6cd";
 }
-
+.ti-video-clapper:before {
+	content: "\e6ce";
+}
+.ti-video-camera:before {
+	content: "\e6cf";
+}
 
 .ti-vector:before {
 	content: "\e6d0";

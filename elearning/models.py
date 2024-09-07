@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from django.contrib.auth.models import User
 
 
 # Create your models here.
@@ -53,6 +54,22 @@ class Lesson(models.Model):
 
     def __str__(self) -> str:
         return f"{self.title}"
+
+from django.utils import timezone
+class UserExpiry(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    form = models.DateField("بداية الاشتراك")
+    to = models.DateField("نهاية الاشتراك")
+    def is_subscription_active(self):
+        today = timezone.now().date()
+        return self.form <= today <= self.to
+
+    class Meta:
+        verbose_name = "مدة الاشتراك"
+        verbose_name_plural = "مدة الاشتراك"
+
+    def __str__(self) -> str:
+        return f"{self.user.get_full_name()}"
 
 
 """
