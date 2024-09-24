@@ -41,7 +41,14 @@ h1 {
     align-items: center;
     height: 100vh;
 }
-
+@media (max-width: 600px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50vh !important;
+    }
+}
 .login-container {
     position: relative;
     width: 22.2rem;

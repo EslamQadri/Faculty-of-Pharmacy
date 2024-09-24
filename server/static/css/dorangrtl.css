@@ -1,0 +1,67 @@
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  
+  article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+  }
+  
+  body {
+    margin: 0;
+    font-family: "Quicksand", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+    direction: rtl;
+  }
+  .about-us{
+    direction: rtl;
+  }
+  .section__title-wrapper {
+    position: relative;
+    z-index: 55;
+    text-align: right;
+}
+.about-us-2__main-content__list-item {
+  text-align: right;
+  margin-top: 30px;
+}
+.img-logo {
+  padding-top: 10px;
+  width: 60px;
+  margin-left: 170px;
+  margin-right: 0;
+}
+.page-navbar .nav-navbar {
+  height: 100%;
+  list-style-type: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+.user-details p {
+  color: #fff;
+  direction: rtl;
+  text-align: right;
+}
+@media (min-width: 500px) and (max-width: 820px) {
+  .user-details {
+      left: 13px;
+      top: 60px;
+      width: 275px;
+      background-color: #272626d6;
+  }
+}
+@media (max-width: 500px) {
+  .user-details {
+      left: 0px;
+      top: 60px;
+      width: 275px;
+      background-color: #121212fa;
+  }
+}
