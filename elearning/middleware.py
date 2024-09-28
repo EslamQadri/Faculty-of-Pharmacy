@@ -9,7 +9,7 @@ class SubscriptionCheckMiddleware(MiddlewareMixin):
         if request.user.is_authenticated:
             try:
                 user_expiry = UserExpiry.objects.get(user=request.user)
-                if not user_expiry.is_subscription_active():
+                if not request.user.is_superuser and not user_expiry.is_subscription_active():
                     return redirect(reverse('subscription_expired'))
             except UserExpiry.DoesNotExist:
                 # Handle the case where UserExpiry does not exist for the user
