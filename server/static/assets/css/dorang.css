@@ -12118,6 +12118,7 @@ body {
 
 /* Conatct section */
 .contact-section {
+  margin-top: 50px;
   z-index: 990;
   position: relative;
   text-align: center;
