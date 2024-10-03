@@ -5,7 +5,7 @@ from django.shortcuts import render
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
-from elearning.models import Lesson, Year, Unit, Subject
+from elearning.models import Lesson, Year, Unit, Subject,UserExpiry
 
 
 # Create your views here.
@@ -43,40 +43,76 @@ def logout_view(request):
 
 
 def home(request):
-    return render(request, "index.html")
+    expiry=None
+    if request.user.is_authenticated:
+        try:
+            expiry = UserExpiry.objects.get(user=request.user)
+        except UserExpiry.DoesNotExist:
+            expiry = None
+    return render(request, "index.html",{"expiry":expiry})
 
 
 @login_required
 def years(request, pk=None):
+    expiry=None
+    if request.user.is_authenticated:
+        try:
+            expiry = UserExpiry.objects.get(user=request.user)
+        except UserExpiry.DoesNotExist:
+            expiry = None
     years_list = Year.objects.all()
     if pk:
         years_list = Year.objects.all(pk=pk)
-    return render(request, "year.html", {"years_list": years_list})
+    return render(request, "year.html", {"years_list": years_list,"expiry":expiry})
 
 
 @login_required
 def subject(request, pk):
-    y = Year.objects.get(pk=pk)
+    expiry=None
+    if request.user.is_authenticated:
+        try:
+            expiry = UserExpiry.objects.get(user=request.user)
+        except UserExpiry.DoesNotExist:
+            expiry = None
+    # y = Year.objects.get(pk=pk)
     subject_list = Subject.objects.filter(year_id=pk)
-    print(subject_list)
-    return render(request, "subject.html", {"subject_list": subject_list})
+    # print(subject_list)
+    return render(request, "subject.html", {"subject_list": subject_list,"expiry":expiry})
 
 
 @login_required
 def unit(request, pk):
+    expiry=None
+    if request.user.is_authenticated:
+        try:
+            expiry = UserExpiry.objects.get(user=request.user)
+        except UserExpiry.DoesNotExist:
+            expiry = None
     unit_list = Unit.objects.filter(Subject_id=pk)
-    return render(request, "unit.html", {"unit_list": unit_list})
+    return render(request, "unit.html", {"unit_list": unit_list,"expiry":expiry})
 
 
 @login_required
 def lesson(request, pk):
+    expiry=None
+    if request.user.is_authenticated:
+        try:
+            expiry = UserExpiry.objects.get(user=request.user)
+        except UserExpiry.DoesNotExist:
+            expiry = None
     lesson_list = Lesson.objects.filter(unit_id=pk)
-    print(lesson_list)
-    return render(request, "lesson.html", {"lesson_list": lesson_list})
+    # print(lesson_list)
+    return render(request, "lesson.html", {"lesson_list": lesson_list,"expiry":expiry})
 
 
 @login_required
 def lesson_view(request, pk):
+    expiry=None
+    if request.user.is_authenticated:
+        try:
+            expiry = UserExpiry.objects.get(user=request.user)
+        except UserExpiry.DoesNotExist:
+            expiry = None
     lesson = Lesson.objects.get(pk=pk)
-    print(lesson)
-    return render(request, "lesson_view.html", {"lesson": lesson})
+    # print(lesson)
+    return render(request, "lesson_view.html", {"lesson": lesson,"expiry":expiry})

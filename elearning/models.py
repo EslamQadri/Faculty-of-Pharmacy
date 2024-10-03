@@ -72,10 +72,3 @@ class UserExpiry(models.Model):
         return f"{self.user.get_full_name()}"
 
 
-"""
-to do
-test in phone 
-make supsctption system 
-and update en ar 
-
-"""

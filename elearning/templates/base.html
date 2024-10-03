@@ -7,6 +7,7 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="دكتور بسمه عبد السلام كورسات صيدلة جامعه ميريت">
+
     <meta name="author" content="">
 
     {% block title%} 
@@ -48,8 +49,12 @@
             
             </ul>
             <ul class="nav-navbar">
-                <li><img class="img-logo" src="{% static 'assets\imgs\logo.png' %}" alt=""></li>
-            </ul>
+                <li>
+                    <a href="{% url 'year'%}">
+                        <img class="img-logo" src="{% static 'assets/imgs/logo.png' %}" alt="">
+                    </a>
+                </li>
+                            </ul>
             <ul class="nav-navbar">
                 <li>
                     <div class="info-user">
@@ -57,9 +62,10 @@
                         <span class="last-lit">{{ user.last_name|slice:":1" }}</span>
                     </div>
                     <div class="user-details">
-                        <p>Name: <span id="user-name">{{ user.first_name }} {{ user.last_name }}</span></p>
-                        <p>The level: <span id="user-age">First</span>Band</p>
-                        <p>Subscription period: <span id="user-subscription">200</span> Days</p>
+                        <p>Name: <span id="user-name">{{ user.get_full_name }} </span></p>
+                        <p>The Beging : <span id="user-age"></span>{{expiry.form|date:"Y-m-d"}}</p>
+                        <p>The End : <span id="user-age"></span>{{expiry.to|date:"Y-m-d"}}</p>
+                       
                     </div>
                 </li>
                 <li class="nav-item">
