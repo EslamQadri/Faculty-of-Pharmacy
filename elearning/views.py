@@ -26,7 +26,7 @@ def login_view(request):
 
             # print(dir(request.session))
 
-            return redirect("home")
+            return redirect("year")
         else:
 
             # Return an 'invalid login' error message.
@@ -49,7 +49,7 @@ def home(request):
             expiry = UserExpiry.objects.get(user=request.user)
         except UserExpiry.DoesNotExist:
             expiry = None
-    return render(request, "index.html",{"expiry":expiry})
+    return render(request, "home.html",{"expiry":expiry})
 
 
 @login_required
