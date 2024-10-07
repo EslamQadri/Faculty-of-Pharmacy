@@ -18,13 +18,13 @@
                 <h1 class="opacity">LOGIN</h1>
                 <form method="post">
                     {% csrf_token %}
-                    <input type="text" placeholder="USERNAME" name ="username" />
-                    <input type="password" placeholder="PASSWORD" name ="password"/>
+                    <input type="text" name="username" placeholder="username*"  required="enter_your_name" />
+                    <input type="password" name="password" placeholder="password*"  required="enter_your_password"/>
                     <button class="opacity">Login</button>
                 </form>
                 <div class="contact-form-box">
                     <form class="active" action="https://formspree.io/f/myyleorq" method="POST" id="dreamit-form">
-                      <div class="row">
+                       <div class="row">
                         <div class="col-lg-6 col-md-6">
                           <div class="form-box">
                             <input type="text" name="name" placeholder="اسمك*" required="" />
