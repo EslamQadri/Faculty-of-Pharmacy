@@ -12,7 +12,7 @@ def all_unexpired_sessions_for_user(user):
     for session in all_sessions:
         session_data = session.get_decoded()
         if str(user.pk) == session_data.get("_auth_user_id"):
-            print("i,m here")
+            #print(f"i'm get all sessions for user {user}")
 
             user_sessions.append(session.pk)
     return Session.objects.filter(pk__in=user_sessions)
