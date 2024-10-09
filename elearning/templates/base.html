@@ -36,7 +36,9 @@
 
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home" class="dark-theme">
+   {% block navbar%}
     {% if user.is_authenticated %}
+    
     <!-- page navbar -->
     <nav class="page-navbar" data-spy="affix" data-offset-top="10">
         <div class="nav-tog">
@@ -85,6 +87,7 @@
 
     </nav><!-- end of page navbar -->
 {%endif%}
+{% endblock navbar %}
   
 
    {% block contact %}

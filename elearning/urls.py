@@ -8,6 +8,7 @@ from elearning.views import (
     lesson_view,
     login_view,
     logout_view,
+    subscription_expired,
 )
 
 urlpatterns = [
@@ -21,4 +22,5 @@ urlpatterns = [
     path("lesson_view/<int:pk>", lesson_view, name="lesson_view"),
     path("login", login_view, name="login"),
     path("logout", logout_view, name="logout"),
+    path("subscription_expired",subscription_expired,name="subscription_expired"),
 ]

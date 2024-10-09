@@ -6,12 +6,17 @@ from elearning.models import UserExpiry
 
 class SubscriptionCheckMiddleware(MiddlewareMixin):
     def process_request(self, request):
+        if request.path == reverse('subscription_expired'):
+            return None
         if request.user.is_authenticated:
+           
             try:
                 user_expiry = UserExpiry.objects.get(user=request.user)
-                if not request.user.is_superuser and not user_expiry.is_subscription_active():
-                    return redirect(reverse('subscription_expired'))
+                
+                if not request.user.is_superuser:
+                    if not user_expiry.is_subscription_active():
+
+                        return redirect('subscription_expired')
             except UserExpiry.DoesNotExist:
-                # Handle the case where UserExpiry does not exist for the user
-                return redirect(reverse('subscription_expired'))
+                return redirect('subscription_expired')
         return None

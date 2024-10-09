@@ -34,7 +34,9 @@ def login_view(request):
 
     return render(request, "login.html")
 
-
+def subscription_expired(request):
+    return render(request, "SubscriptionExpired.html")
+    
 @login_required
 def logout_view(request):
     logout(request)
