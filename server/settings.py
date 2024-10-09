@@ -51,7 +51,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "DjangoRangeMiddleware.middleware.RangesMiddleware",
-    #"elearning.middleware.SubscriptionCheckMiddleware",
+    "elearning.middleware.SubscriptionCheckMiddleware",
     # "elearning.backends.SubscriptionBackend",
     # "django.contrib.auth.backends.ModelBackend",
 ]
