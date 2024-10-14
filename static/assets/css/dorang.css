@@ -12401,3 +12401,12 @@ body.dark-theme {
 .media-social.show-icons {
   left: -115px;
 }
+.video-js .vjs-control-bar .vjs-download {
+  display: none;
+}
+.no-select {
+  user-select: none;
+}
+img {
+  pointer-events: none;
+}

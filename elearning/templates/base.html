@@ -302,5 +302,65 @@
     <!-- Dorang js -->
     <script src="{% static 'assets/js/dorang.js'%}"></script>
     <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+    <script>
+        var player = videojs('my-video');
+    
+        // منع النقر على زر التحميل
+        player.on('click', function(event) {
+            if (event.target.classList.contains('vjs-download')) {
+                event.preventDefault();
+            }
+        });
+    
+        // منع فتح أدوات المطور
+        document.onkeydown = function(e) {
+            // تعطيل F12
+            if (e.key === "F12") {
+                e.preventDefault();
+                return false;
+            }
+            // تعطيل اختصارات Ctrl + I, Ctrl + U, Ctrl + C
+            if (e.ctrlKey && (e.key === "i" || e.key === "u" || e.key === "c")) {
+                e.preventDefault();
+                return false;
+            }
+        };
+    
+        // منع النقر بزر الفأرة الأيمن
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+    
+        document.addEventListener('dblclick', function(e) {
+            e.preventDefault();
+        });
+    
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 's' || e.key === 'p')) {
+                e.preventDefault();
+            }
+        });
+        document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
+document.addEventListener('keydown', function(e) {
+    // Disable PrintScreen
+    if (e.key === 'PrintScreen') {
+        e.preventDefault();
+    }
+    // Disable Ctrl+Shift+S (often used for screenshots)
+    if (e.ctrlKey && e.shiftKey && e.key === 'S') {
+        e.preventDefault();
+    }
+});
+document.addEventListener('fullscreenchange', function() {
+    if (document.fullscreenElement) {
+        alert("Fullscreen mode is not allowed.");
+        document.exitFullscreen();
+    }
+});
+    </script>
+    
+    
 </body>
 </html>
