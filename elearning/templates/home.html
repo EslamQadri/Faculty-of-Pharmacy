@@ -30,9 +30,9 @@
                           <div class="col-lg-5">
                             <div class="about-us-6__content">
                               <div class="section__title-wrapper mb-40">
-                                  <h5 class="section__subtitle title-glow mb-10 mb-xs-10 title-animation"><img src="{% static 'assets/imgs/heart-2.png' %}" alt="icon not found" class="img-fluid"> About Courses</h5>
+                                  <h5 class="section__subtitle title-glow mb-10 mb-xs-10 title-animation"><img src="{% static 'assets/imgs/heart-2.png' %}" alt="icon not found" class="img-fluid"> {% trans "About Courses" %}</h5>
                                   <h2 class="section__title color-theme-black font-medium mb-15 title-animation"></h2>
-                                  <p class="mb-0">Experience in-depth training that covers essential pharmaceutical concepts and hands-on skills. This course equips you with the knowledge to excel in the dynamic field of pharmacy and improve patient care.</p>
+                                  <p class="mb-0"> {% trans "Experience in-depth training that covers essential pharmaceutical concepts and hands-on skills. This course equips you with the knowledge to excel in the dynamic field of pharmacy and improve patient care."%}</p>
           
                               </div>
           
@@ -45,8 +45,8 @@
                                             
                                       </div>
                                       <div class="about-us-2__main-content__list-item-text">
-                                          <h4 class="mb-10 title-animation">Subscribe to the course</h4>
-                                          <p class="mb-0">You can subscribe and pay via Vodafone Cash and communicate and pay through this number: <span class="num-sup">01040499373</span></p>
+                                          <h4 class="mb-10 title-animation">{% trans "Subscribe to the course" %}</h4>
+                                          <p class="mb-0">{% trans "You can subscribe and pay via Vodafone Cash and communicate and pay through this number:" %} <span class="num-sup">01040499373</span></p>
                                       </div>
                                   </div>
                                   <div class="about-us-2__main-content__list-item">
@@ -66,8 +66,8 @@
                                       </div>
                                       {% if not user.is_authenticated %}
                                       <div class="about-us-2__main-content__list-item-text">
-                                          <h4 class="mb-10 title-animation">Log in to the course</h4>
-                                          <p class="mb-0">After completing the previous steps, you will be sent your username and password, and you can now register  <br><br> <a id="login-about" href="{% url 'login'%}">log in 
+                                          <h4 class="mb-10 title-animation">{% trans "Log in to the course" %}</h4>
+                                          <p class="mb-0">{% trans "After completing the previous steps, you will be sent your username and password, and you can now login" %}  <br><br> <a id="login-about" href="{% url 'login'%}">log in 
                                             <svg fill="#000000" width="20px" height="20px" viewBox="0 0 24 24" id="right-up-direction-circle" data-name="Flat Line" xmlns="http://www.w3.org/2000/svg" class="icon flat-line"><path id="secondary" d="M18.36,5.64a9,9,0,1,0,0,12.72A9,9,0,0,0,18.36,5.64ZM15.81,9.35l-1,5.49L13.4,13.43,9.88,17,7.05,14.12l3.52-3.52L9.16,9.19l5.49-1A1,1,0,0,1,15.81,9.35Z" style="fill: rgb(44, 169, 188); stroke-width: 2;"></path><path id="primary" d="M13.4,13.43,9.88,17,7.05,14.12l3.52-3.52L9.16,9.19l5.49-1a1,1,0,0,1,1.16,1.16l-1,5.49ZM5.64,5.64a9,9,0,1,0,12.72,0A9,9,0,0,0,5.64,5.64Z" style="fill: none; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path></svg>
                                           </a></p>
                                       </div>

@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load i18n %} 
 {% block title%} 
 <title> Dr Bassma Abdelslam   </title>
 {% endblock title%}
@@ -11,9 +12,9 @@
   <header class="header">
     <div class="overlay"></div>
     <div class="header-content">
-   <h1>Your  Subscription  is Expired</h1>
-   <h1>contact With Provider to  Subscription </h1>
-
+   <h1> {% trans "Your  Subscription  is Expired " %}</h1>
+   <h1>{% trans "contact With Provider to  Subscription" %} </h1>
+   <br> <a id="login-about" href="{% url 'login'%}">log in 
     </div>
   </header><!-- End of Page Header -->
 {% endblock contact %}

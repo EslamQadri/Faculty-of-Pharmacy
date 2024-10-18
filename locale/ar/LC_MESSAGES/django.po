@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-26 19:08+0300\n"
+"POT-Creation-Date: 2024-10-19 02:18+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,42 +19,76 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: .\elearning\models.py:7
+#: elearning/models.py:8
 msgid "Year"
 msgstr "السنة الدراسية"
 
-#: .\elearning\models.py:18
+#: elearning/models.py:19
 msgid "Subject"
 msgstr "المادة"
 
-#: .\elearning\models.py:31
+#: elearning/models.py:32
 msgid "Unit"
 msgstr "الباب"
 
-#: .\elearning\models.py:43
+#: elearning/models.py:44
 msgid "video name"
 msgstr "عنوان الفيديو"
 
-#: .\elearning\templates\index.html:12
-msgid "What Happens Tomorrow?"
+#: elearning/templates/SubscriptionExpired.html:15
+msgid "Your  Subscription  is Expired "
+msgstr " فترة اشتراك انتهت "
+
+#: elearning/templates/SubscriptionExpired.html:16
+msgid "contact With Provider to  Subscription"
+msgstr " تواصل مع مقدم الكورس "
+
+#: elearning/templates/home.html:33
+msgid "About Courses"
+msgstr "عن الكورس "
+
+#: elearning/templates/home.html:35
+msgid ""
+"Experience in-depth training that covers essential pharmaceutical concepts "
+"and hands-on skills. This course equips you with the knowledge to excel in "
+"the dynamic field of pharmacy and improve patient care."
 msgstr ""
+"احصل على تدريب متعمق يغطي المفاهيم الصيدلانية الأساسية والمهارات العملية. "
+"تزودك هذه الدورة بالمعرفة اللازمة للتفوق في مجال الصيدلة وتحسين رعاية المرضى."
 
-#: .\elearning\templates\index.html:13
-msgid "Exam? Learn more, get more!"
-msgstr "امتحان؟ اتعلم اكتر تجيب اكتر "
+#: elearning/templates/home.html:48
+msgid "Subscribe to the course"
+msgstr "اشتراك في الكورس "
 
-#: .\elearning\templates\index.html:15
-msgid "To subscribe, connect with"
-msgstr "للاشتراك تواصل مع "
+#: elearning/templates/home.html:49
+msgid ""
+"You can subscribe and pay via Vodafone Cash and communicate and pay through "
+"this number:"
+msgstr "يمكنك الاشتراك والدفع فودافون كاش عن طريق الرقم "
 
-#: .\elearning\templates\index.html:16
-msgid "Doctor Name Father-Name"
-msgstr "دكتور فلانة الفولانيه "
+#: elearning/templates/home.html:69
+msgid "Log in to the course"
+msgstr " الدخول الي الكورس "
 
-#: .\server\settings.py:120
+#: elearning/templates/home.html:70
+msgid ""
+"After completing the previous steps, you will be sent your username and "
+"password, and you can now login"
+msgstr "بعد اتمام عملية التواصل والدفع سيتم ارسال لك اسم المستخدم وكلمة المرور ,ويمكنك الان الدخول "
+
+#: server/settings.py:126
 msgid "English"
 msgstr "الانجليزية"
 
-#: .\server\settings.py:121
+#: server/settings.py:127
 msgid "Arabic"
 msgstr "العربية"
+
+#~ msgid "Exam? Learn more, get more!"
+#~ msgstr "امتحان؟ اتعلم اكتر تجيب اكتر "
+
+#~ msgid "To subscribe, connect with"
+#~ msgstr "للاشتراك تواصل مع "
+
+#~ msgid "Doctor Name Father-Name"
+#~ msgstr "دكتور فلانة الفولانيه "
