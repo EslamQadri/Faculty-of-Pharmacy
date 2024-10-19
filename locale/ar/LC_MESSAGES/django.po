@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-19 15:17+0300\n"
+"POT-Creation-Date: 2024-10-19 17:05+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,6 +34,19 @@ msgstr "الباب"
 #: elearning/models.py:44
 msgid "video name"
 msgstr "عنوان الفيديو"
+
+#: elearning/templates/404.html:16
+msgid "404 - Page Not Found"
+msgstr "الصفحة غير موجود"
+
+#: elearning/templates/404.html:18
+msgid "Sorry, the page you are looking for does not exist."
+msgstr "ناسف الصفحة التي تبحث عنها غير موجودة "
+
+#: elearning/templates/404.html:20
+#: elearning/templates/SubscriptionExpired.html:17
+msgid "Home"
+msgstr "الصفحة الرئيسية"
 
 #: elearning/templates/SubscriptionExpired.html:15
 msgid "Your  Subscription  is Expired "
@@ -78,11 +91,11 @@ msgstr ""
 "بعد اتمام عملية التواصل والدفع سيتم ارسال لك اسم المستخدم وكلمة المرور ,"
 "ويمكنك الان الدخول "
 
-#: server/settings.py:126
+#: server/settings.py:124
 msgid "Arabic"
 msgstr "العربية"
 
-#: server/settings.py:127
+#: server/settings.py:125
 msgid "English"
 msgstr "الانجليزية"
 

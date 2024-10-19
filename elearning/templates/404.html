@@ -3,6 +3,7 @@
 {% block title%} 
 <title> Dr Bassma Abdelslam   </title>
 {% endblock title%}
+
 {% block navbar %}
 
 {% endblock navbar %}
@@ -12,8 +13,10 @@
   <header class="header">
     <div class="overlay"></div>
     <div class="header-content">
-   <h1> {% trans "Your  Subscription  is Expired " %}</h1>
-   <h1>{% trans "contact With Provider to  Subscription" %} </h1>
+   <h1> {% trans "404 - Page Not Found" %}</h1>
+   
+   <h3>{% trans "Sorry, the page you are looking for does not exist." %}</h3>
+
    <br> <a id="login-about" href="{% url 'home'%}">{% trans "Home" %}</a>
     </div>
   </header><!-- End of Page Header -->
