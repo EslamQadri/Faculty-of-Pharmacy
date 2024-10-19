@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-19 02:18+0300\n"
+"POT-Creation-Date: 2024-10-19 15:17+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -74,15 +74,17 @@ msgstr " الدخول الي الكورس "
 msgid ""
 "After completing the previous steps, you will be sent your username and "
 "password, and you can now login"
-msgstr "بعد اتمام عملية التواصل والدفع سيتم ارسال لك اسم المستخدم وكلمة المرور ,ويمكنك الان الدخول "
+msgstr ""
+"بعد اتمام عملية التواصل والدفع سيتم ارسال لك اسم المستخدم وكلمة المرور ,"
+"ويمكنك الان الدخول "
 
 #: server/settings.py:126
-msgid "English"
-msgstr "الانجليزية"
-
-#: server/settings.py:127
 msgid "Arabic"
 msgstr "العربية"
+
+#: server/settings.py:127
+msgid "English"
+msgstr "الانجليزية"
 
 #~ msgid "Exam? Learn more, get more!"
 #~ msgstr "امتحان؟ اتعلم اكتر تجيب اكتر "
