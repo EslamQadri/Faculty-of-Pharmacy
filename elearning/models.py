@@ -39,6 +39,13 @@ class Unit(models.Model):
         verbose_name_plural = "الباب"
 
 
+class PdfFiles(models.Model):
+    file = models.FileField(upload_to='files/')
+    class Meta:
+        verbose_name = "PDFs"
+        verbose_name_plural = "PDFs"
+    def __str__(self) -> str:
+        return f"{self.pk}"
 class Lesson(models.Model):
     unit = models.ForeignKey(Unit, on_delete=models.CASCADE)
     title = models.CharField(_("video name"), max_length=255)
@@ -46,11 +53,12 @@ class Lesson(models.Model):
     description = models.TextField(
         "وصف الفيديو ", max_length=2550, null=True, blank=True
     )
-    number = models.PositiveIntegerField("رقم الدرس ")
+    number = models.PositiveIntegerField("رقم المحاضرة  ")
+    files = models.ManyToManyField(PdfFiles, blank=True, related_name="PDFs")
 
     class Meta:
-        verbose_name = "الدرس"
-        verbose_name_plural = "الدرس"
+        verbose_name = "المحاضرة"
+        verbose_name_plural = "المحاضرة"
 
     def __str__(self) -> str:
         return f"{self.title}"
