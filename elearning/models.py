@@ -41,11 +41,12 @@ class Unit(models.Model):
 
 class PdfFiles(models.Model):
     file = models.FileField(upload_to='files/')
+    name=models.CharField("Name",max_length=250)
     class Meta:
         verbose_name = "PDFs"
         verbose_name_plural = "PDFs"
     def __str__(self) -> str:
-        return f"{self.pk}"
+        return f"{self.name}"
 class Lesson(models.Model):
     unit = models.ForeignKey(Unit, on_delete=models.CASCADE)
     title = models.CharField(_("video name"), max_length=255)
