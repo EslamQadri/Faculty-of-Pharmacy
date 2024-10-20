@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "elearning",
+    "request",
 ]
 
 MIDDLEWARE = [
@@ -52,6 +53,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "DjangoRangeMiddleware.middleware.RangesMiddleware",
     "elearning.middleware.SubscriptionCheckMiddleware",
+    'request.middleware.RequestMiddleware',
     # "elearning.backends.SubscriptionBackend",
     # "django.contrib.auth.backends.ModelBackend",
 ]
