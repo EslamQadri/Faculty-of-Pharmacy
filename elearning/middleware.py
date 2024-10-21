@@ -19,6 +19,7 @@ class SubscriptionCheckMiddleware(MiddlewareMixin):
                         logout(request)
                         return redirect('subscription_expired')
                 except UserExpiry.DoesNotExist:
+                    logout(request)
                     return redirect('subscription_expired')
             return None 
         return None
