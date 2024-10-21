@@ -17,6 +17,7 @@ class SubscriptionCheckMiddleware(MiddlewareMixin):
                     
                     if not user_expiry.is_subscription_active():
                         logout(request)
+                        # to do make page to this 
                         return redirect('subscription_expired')
                 except UserExpiry.DoesNotExist:
                     logout(request)
