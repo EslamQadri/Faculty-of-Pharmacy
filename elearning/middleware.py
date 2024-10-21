@@ -3,6 +3,7 @@ from django.shortcuts import redirect
 from django.urls import reverse
 from django.utils import timezone
 from elearning.models import UserExpiry
+from django.contrib.auth import  logout
 
 class SubscriptionCheckMiddleware(MiddlewareMixin):
     def process_request(self, request):
@@ -15,7 +16,7 @@ class SubscriptionCheckMiddleware(MiddlewareMixin):
                     user_expiry = UserExpiry.objects.get(user=request.user)
                     
                     if not user_expiry.is_subscription_active():
-
+                        logout(request)
                         return redirect('subscription_expired')
                 except UserExpiry.DoesNotExist:
                     return redirect('subscription_expired')
