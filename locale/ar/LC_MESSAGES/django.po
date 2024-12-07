@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-19 17:05+0300\n"
+"POT-Creation-Date: 2024-12-07 21:04+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,14 +24,12 @@ msgid "Year"
 msgstr "السنة الدراسية"
 
 #: elearning/models.py:19
-msgid "Subject"
-msgstr "المادة"
+#, fuzzy
+#| msgid "About Courses"
+msgid "Course"
+msgstr "عن الكورس "
 
-#: elearning/models.py:32
-msgid "Unit"
-msgstr "الباب"
-
-#: elearning/models.py:44
+#: elearning/models.py:52
 msgid "video name"
 msgstr "عنوان الفيديو"
 
@@ -49,12 +47,16 @@ msgid "Home"
 msgstr "الصفحة الرئيسية"
 
 #: elearning/templates/SubscriptionExpired.html:15
-msgid "Your  Subscription  is Expired "
-msgstr " فترة اشتراك انتهت "
+#, fuzzy
+#| msgid "Your  Subscription  is Expired "
+msgid "Your  Subscription  is Expired or You do not have the Course "
+msgstr "  فترة اشتراك انتهت او انت غير مسجل بهذا الكورس "
 
 #: elearning/templates/SubscriptionExpired.html:16
-msgid "contact With Provider to  Subscription"
-msgstr " تواصل مع مقدم الكورس "
+#, fuzzy
+#| msgid "contact With Provider to  Subscription"
+msgid "contact With Provider to  Subscription or get Course "
+msgstr "  تواصل مع مقدم الكورس للاشتراك و الحصول علي الكورس"
 
 #: elearning/templates/home.html:33
 msgid "About Courses"
@@ -91,13 +93,23 @@ msgstr ""
 "بعد اتمام عملية التواصل والدفع سيتم ارسال لك اسم المستخدم وكلمة المرور ,"
 "ويمكنك الان الدخول "
 
-#: server/settings.py:124
+#: elearning/templates/lecture_view.html:42
+msgid "Back"
+msgstr "عودة"
+
+#: server/settings.py:129
 msgid "Arabic"
 msgstr "العربية"
 
-#: server/settings.py:125
+#: server/settings.py:130
 msgid "English"
 msgstr "الانجليزية"
+
+#~ msgid "Subject"
+#~ msgstr "المادة"
+
+#~ msgid "Unit"
+#~ msgstr "الباب"
 
 #~ msgid "Exam? Learn more, get more!"
 #~ msgstr "امتحان؟ اتعلم اكتر تجيب اكتر "

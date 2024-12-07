@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-19 01:28+0300\n"
+"POT-Creation-Date: 2024-12-07 21:02+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,23 +23,43 @@ msgid "Year"
 msgstr "السنة الدراسية"
 
 #: elearning/models.py:19
-msgid "Subject"
-msgstr "المادة"
+msgid "Course"
+msgstr ""
 
-#: elearning/models.py:32
-msgid "Unit"
-msgstr "الباب"
-
-#: elearning/models.py:44
+#: elearning/models.py:52
 msgid "video name"
 msgstr "عنوان الفيديو"
 
-#: elearning/templates/SubscriptionExpired.html:14
-msgid "Your  Subscription  is Expired "
+#: elearning/templates/404.html:16
+msgid "404 - Page Not Found"
+msgstr ""
+
+#: elearning/templates/404.html:18
+msgid "Sorry, the page you are looking for does not exist."
+msgstr ""
+
+#: elearning/templates/404.html:20
+#: elearning/templates/SubscriptionExpired.html:17
+msgid "Home"
 msgstr ""
 
 #: elearning/templates/SubscriptionExpired.html:15
+msgid "Your  Subscription  is Expired "
+msgstr ""
+
+#: elearning/templates/SubscriptionExpired.html:16
 msgid "contact With Provider to  Subscription"
+msgstr ""
+
+#: elearning/templates/home.html:33
+msgid "About Courses"
+msgstr ""
+
+#: elearning/templates/home.html:35
+msgid ""
+"Experience in-depth training that covers essential pharmaceutical concepts "
+"and hands-on skills. This course equips you with the knowledge to excel in "
+"the dynamic field of pharmacy and improve patient care."
 msgstr ""
 
 #: elearning/templates/home.html:48
@@ -59,13 +79,23 @@ msgstr ""
 #: elearning/templates/home.html:70
 msgid ""
 "After completing the previous steps, you will be sent your username and "
-"password, and you can now register"
+"password, and you can now login"
 msgstr ""
 
-#: server/settings.py:126
+#: elearning/templates/lecture_view.html:42
+msgid "Back"
+msgstr "عودة"
+
+#: server/settings.py:129
+msgid "Arabic"
+msgstr "العربية"
+
+#: server/settings.py:130
 msgid "English"
 msgstr "الانجليزية"
 
-#: server/settings.py:127
-msgid "Arabic"
-msgstr "العربية"
+#~ msgid "Subject"
+#~ msgstr "المادة"
+
+#~ msgid "Unit"
+#~ msgstr "الباب"
