@@ -15,28 +15,28 @@ class Year(models.Model):
         verbose_name_plural = "السنه_الدراسية"
 
 
-class Subject(models.Model):
-    name = models.CharField(_("Subject"), max_length=255)
+class Course(models.Model):
+    name = models.CharField(_("Course"), max_length=255)
     year = models.ForeignKey(Year, on_delete=models.CASCADE)
 
     def __str__(self) -> str:
         return f"{self.name}"
 
     class Meta:
-        verbose_name = "المادة"
-        verbose_name_plural = "المادة"
+        verbose_name = "الكورس"
+        verbose_name_plural = "الكورس"
 
 
-class Unit(models.Model):
-    Subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
-    name = models.CharField(_("Unit"), max_length=255)
+# class Unit(models.Model):
+#     Subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
+#     name = models.CharField(_("Unit"), max_length=255)
 
-    def __str__(self) -> str:
-        return f"{self.name}"
+#     def __str__(self) -> str:
+#         return f"{self.name}"
 
-    class Meta:
-        verbose_name = "الباب"
-        verbose_name_plural = "الباب"
+#     class Meta:
+#         verbose_name = "الباب"
+#         verbose_name_plural = "الباب"
 
 
 class PdfFiles(models.Model):
@@ -47,8 +47,8 @@ class PdfFiles(models.Model):
         verbose_name_plural = "PDFs"
     def __str__(self) -> str:
         return f"{self.name}"
-class Lesson(models.Model):
-    unit = models.ForeignKey(Unit, on_delete=models.CASCADE)
+class Lecture(models.Model):
+    course= models.ForeignKey(Course,on_delete=models.CASCADE)
     title = models.CharField(_("video name"), max_length=255)
     video = models.FileField(upload_to="videos/")
     description = models.TextField(
@@ -69,6 +69,8 @@ class UserExpiry(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     form = models.DateField("بداية الاشتراك")
     to = models.DateField("نهاية الاشتراك")
+    courses=models.ManyToManyField("Course", blank=True,)
+    
     def is_subscription_active(self):
         today = timezone.now().date()
         return self.form <= today <= self.to
@@ -79,5 +81,4 @@ class UserExpiry(models.Model):
 
     def __str__(self) -> str:
         return f"{self.user.get_full_name()}"
-
 

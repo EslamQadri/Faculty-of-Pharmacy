@@ -11,7 +11,7 @@
      {% for year in years_list %}
      
      
-     <h1 class="header-title" > <a href="{% url 'subjects' pk=year.pk %}">{{year.name}}</a></h1>
+     <h1 class="header-title" > <a href="{% url 'course' pk=year.pk %}">{{year.name}}</a></h1>
      {% endfor %}
     </div>
   </header><!-- End of Page Header -->

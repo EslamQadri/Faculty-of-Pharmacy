@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block title%} 
 <title> Dr Bassma Abdelslam   </title>
+
 {% endblock title%}
 {% block contact %}
   <!-- Page Header -->
@@ -8,10 +9,10 @@
     <div class="overlay"></div>
     <div class="header-content">
        
-     {% for subject in subject_list %}
+     {% for lecture in lecture_list %}   
      
      
-     <h1 class="header-title" > <a href="{% url 'units' pk=subject.pk %}">{{subject.name}}</a></h1>
+     <h1 class="header-title" > <a href="{% url 'lecture_view' pk=lecture.pk %}">{{lecture.title}}</a></h1>
      {% endfor %}
     </div>
   </header><!-- End of Page Header -->

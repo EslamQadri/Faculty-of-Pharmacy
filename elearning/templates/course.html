@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 {% block title%} 
 <title> Dr Bassma Abdelslam   </title>
-
 {% endblock title%}
 {% block contact %}
   <!-- Page Header -->
@@ -9,10 +8,13 @@
     <div class="overlay"></div>
     <div class="header-content">
        
-     {% for lesson in lesson_list %}   
+     {% for course in course_list %}
      
      
-     <h1 class="header-title" > <a href="{% url 'lesson_view' pk=lesson.pk %}">{{lesson.title}}</a></h1>
+     <h1 class="header-title" > <a href="{% url 'lecture' pk=course.pk %}">{{course.name}}</a></h1>
+     {% empty %}
+     <h1 class="header-title" > You Do not have any course contact with course provider  </h1>
+
      {% endfor %}
     </div>
   </header><!-- End of Page Header -->

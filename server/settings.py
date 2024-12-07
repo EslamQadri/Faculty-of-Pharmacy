@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = "1wh*#8pu7xzcb+%rn-+rak1xgdoa(ac%inl$%aoi2md2gz^y=9"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 LOGIN_URL = "login"
@@ -52,8 +52,10 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "DjangoRangeMiddleware.middleware.RangesMiddleware",
-    "elearning.middleware.SubscriptionCheckMiddleware",
+    #"elearning.middleware.SubscriptionCheckMiddleware",
+    "elearning.middleware.SubscriptionMiddleware",
     'request.middleware.RequestMiddleware',
+    
     # "elearning.backends.SubscriptionBackend",
     # "django.contrib.auth.backends.ModelBackend",
 ]

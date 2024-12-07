@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load i18n %} 
 {% block title%} 
 <title> Dr Bassma Abdelslam   </title>
 
@@ -12,11 +12,11 @@
     <div class="container">
       <div class="header-content" id="video-v">
        
-        <h1 class="header-title">{{ lesson.number }}</h1>
-        <h1 class="header-title">{{ lesson.title }}</h1>
-        <p>{{ lesson.description }}</p>
+        <h1 class="header-title">{{ lecture.number }}</h1>
         
-        <!-- Assuming lesson.video is a file path relative to the media directory -->
+        <h1 class="header-title">{{ lecture.title }}</h1>
+        <p>{{ lecture.description }}</p>
+        
        
         
         <video
@@ -29,7 +29,7 @@
        
         data-setup='{"playbackRates": [1, 1.5, 2] }'
       >
-        <source src="{{ lesson.video.url }}" type="video/mp4" />
+        <source src="{{ lecture.video.url }}" type="video/mp4" />
        
         <p class="vjs-no-js">
           To view this video please enable JavaScript, and consider upgrading to a
@@ -39,8 +39,12 @@
           >
         </p>
       </video>
+      <br> <a id="login-about" href="{% url 'lecture' pk=lecture.course.pk %}">  {% trans "Back" %}</a>
     </div>
+   
     </div>
-  </header><!-- End of Page Header -->
+  </header><!-- End of Page Header
+ 
+  -->
  
 {% endblock contact %}
