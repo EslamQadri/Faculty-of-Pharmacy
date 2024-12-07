@@ -48,7 +48,7 @@ class PdfFiles(models.Model):
     def __str__(self) -> str:
         return f"{self.name}"
 class Lecture(models.Model):
-    course= models.ForeignKey(Course,on_delete=models.CASCADE)
+    course= models.ForeignKey(Course,on_delete=models.CASCADE,blank=True,null=True)
     title = models.CharField(_("video name"), max_length=255)
     video = models.FileField(upload_to="videos/")
     description = models.TextField(
