@@ -40,7 +40,7 @@ class SubscriptionMiddleware:
                 view_name = resolver_match.view_name
  
                 # Check if the view name matches lecture or lecture_view
-                if view_name in ["lecture", "lecture_view"]:
+                if view_name =="lecture":
                     try:
                         user_expiry = UserExpiry.objects.get(user=request.user)
                         if not user_expiry.is_subscription_active():
